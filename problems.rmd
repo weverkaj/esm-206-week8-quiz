@@ -1,0 +1,42 @@
+---
+title: "Quiz Calculations"
+author: "Jacob Weverka and Craig Kopulsky"
+date: "11/25/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(effsize)
+```
+
+Questions 1 - 5
+
+```{r}
+
+soil_A <- c(2.4, 3.1, 0.9, 8.6, 5.2, 5.4, 4.7)
+soil_B <- c(7.1, 9.2, 4.5, 6.4, 2.9, 11.6, 8.7)
+
+t.test(soil_A, soil_B)
+
+cohen.d(soil_A, soil_B)
+
+```
+
+Question 9
+
+```{r}
+wingspan <- function(height, rsh, osprey) {
+  2.56 + 0.28*(height) - 0.9*(rsh) - 1.2*(osprey)
+}
+
+wingspan(height = 0.9, rsh = 1, osprey = 0)
+wingspan(height = 1.4, rsh = 0, osprey = 0)
+
+
+
+
+```
+
